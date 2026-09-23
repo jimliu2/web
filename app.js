@@ -2365,10 +2365,10 @@ function handleTaskFileSelect(e) {
 function processFileForUpload(file) {
   if (!currentTaskDetail) return;
   
-  // 限制檔案大小為 3MB
-  const maxBytes = 3 * 1024 * 1024;
+  // 限制檔案大小為 10MB
+  const maxBytes = 10 * 1024 * 1024;
   if (file.size > maxBytes) {
-    showToast('檔案大小超過限制 (最大 3MB)。', 'warning');
+    showToast('檔案大小超過限制 (最大 10MB)。', 'warning');
     return;
   }
 
@@ -2616,9 +2616,10 @@ function handleReportFileSelect(e) {
 }
 
 function processReportFile(file) {
-  const maxBytes = 3 * 1024 * 1024;
+  // 限制檔案大小為 10MB
+  const maxBytes = 10 * 1024 * 1024;
   if (file.size > maxBytes) {
-    showToast('檔案大小超過限制 (最大 3MB)。', 'warning');
+    showToast('檔案大小超過限制 (最大 10MB)。', 'warning');
     return;
   }
 
